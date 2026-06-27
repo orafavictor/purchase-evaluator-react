@@ -1,0 +1,17 @@
+:root {
+  margin: 0;
+  background-color: #360065;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
