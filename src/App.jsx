@@ -7,6 +7,7 @@ function App() {
   const [productUsage, setProductUsage] = useState("");
   const [costPerUse, setCostPerUse] = useState(0);
   const [verdict, setVerdict] = useState("");
+  const [showVerdict, setShowVerdict] = useState(false);
 
   const handleNameChange = (e) => {
     setProductName(e.target.value); 
@@ -33,6 +34,8 @@ function App() {
     }
 
     setCostPerUse(resultEvaluate);
+
+    setShowVerdict(true);
   }
 
   return (
@@ -73,6 +76,7 @@ function App() {
             <button name="button" onClick={handleEvaluateButton}>Avaliar Compra</button>
           </div>
         </section>
+        {showVerdict && (
         <section id='resultArea'>
           <div>
             <h2>Veredito!</h2>
@@ -88,6 +92,7 @@ function App() {
             </button>
           </div>
         </section>
+        )}
       </main>
     </>
   )
