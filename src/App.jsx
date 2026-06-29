@@ -68,8 +68,8 @@ function App() {
           <div>
             <h2>Veredito!</h2>
             <p>
-              O produto xyz custará:<br />
-              R$ resultado por uso.<br />
+              O produto {productName} custará:<br />
+              R$ {costPerUse} por uso.<br />
               Compre / não compre / Atenção<br />
             </p>
           </div>
