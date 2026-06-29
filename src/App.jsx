@@ -36,7 +36,15 @@ function App() {
     setCostPerUse(resultEvaluate);
 
     setShowVerdict(true);
-  }
+  };
+
+  const handleResetButton = () => {
+    setShowVerdict(false);
+
+    setProductName("");
+    setProductPrice("");
+    setProductUsage("");
+  }; 
 
   return (
     <>
@@ -87,7 +95,7 @@ function App() {
             </p>
           </div>
           <div>
-            <button name="button">
+            <button name="button" onClick={handleResetButton}>
               Fazer nova avaliação
             </button>
           </div>
