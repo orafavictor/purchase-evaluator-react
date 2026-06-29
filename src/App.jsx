@@ -6,6 +6,7 @@ function App() {
   const [productPrice, setProductPrice] = useState("");
   const [productUsage, setProductUsage] = useState("");
   const [costPerUse, setCostPerUse] = useState(0);
+  const [verdict, setVerdict] = useState("");
 
   const handleNameChange = (e) => {
     setProductName(e.target.value); 
@@ -22,6 +23,14 @@ function App() {
     const newProductUsage = Number(productUsage);
 
     const resultEvaluate = newProductPrice / newProductUsage;
+
+    if (resultEvaluate <= 50) {
+      setVerdict("Compre sem medo!");
+    } else if (resultEvaluate > 50 && resultEvaluate <= 100) {
+      setVerdict("Atenção: Avalie bem a necessidade.");
+    } else {
+      setVerdict("Não compre! Está caro paro o uso!")
+    }
 
     setCostPerUse(resultEvaluate);
   }
@@ -70,7 +79,7 @@ function App() {
             <p>
               O produto {productName} custará:<br />
               R$ {costPerUse} por uso.<br />
-              Compre / não compre / Atenção<br />
+              {verdict}<br />
             </p>
           </div>
           <div>
