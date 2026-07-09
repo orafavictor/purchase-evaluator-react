@@ -5,7 +5,7 @@ function Input(props) {
             name={props.name}
             placeholder={props.placeholder}
             value={props.value}
-            onChange={props.onChange}
+            onChange={props.onChangeAction}
         />
     );
 }

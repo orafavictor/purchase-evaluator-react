@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ProductForm from './ProductForm';
 import './App.css'
 
 function App() {
@@ -52,38 +53,17 @@ function App() {
         <h1>Avaliador de Compras</h1>
       </header>
       <main className='container'>
-        <section id='dataArea'>
-          <div>
-            <h3>Nome do Produto</h3>
-            <input 
-              type="text" 
-              name="product" 
-              placeholder="digite o nome do produto"
-              value={productName}
-              onChange={handleNameChange}/>
-          </div>
-          <div>
-            <h3>Preço do Produto</h3>
-            <input 
-              type="text" 
-              name="price" 
-              placeholder="digite o preço do produto" 
-              value={productPrice}
-              onChange={handlePriceChange}/>
-          </div>
-          <div>
-            <h3>Estimativa de Uso</h3>
-            <input 
-            type="text" 
-            name="usageEstimate" 
-            placeholder="digite a estimativa de uso do produto"
-            value={productUsage}
-            onChange={handleUsageChange}/>
-          </div>
-          <div>
-            <button name="button" onClick={handleEvaluateButton}>Avaliar Compra</button>
-          </div>
-        </section>
+        
+        <ProductForm 
+          productName={productName}
+          onNameChange={handleNameChange}
+          productPrice={productPrice}
+          onPriceChange={handlePriceChange}
+          productUsage={productUsage}
+          onUsageChange={handleUsageChange}
+          onEvaluate={handleEvaluateButton}
+        />
+        
         {showVerdict && (
         <section id='resultArea'>
           <div>
