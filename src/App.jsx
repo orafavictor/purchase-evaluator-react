@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ProductForm from './ProductForm';
+import VerdictPanel from './VerdictPanel';
 import './App.css'
 
 function App() {
@@ -65,21 +66,12 @@ function App() {
         />
         
         {showVerdict && (
-        <section id='resultArea'>
-          <div>
-            <h2>Veredito!</h2>
-            <p>
-              O produto {productName} custará:<br />
-              R$ {costPerUse} por uso.<br />
-              {verdict}<br />
-            </p>
-          </div>
-          <div>
-            <button name="button" onClick={handleResetButton}>
-              Fazer nova avaliação
-            </button>
-          </div>
-        </section>
+        <VerdictPanel 
+            productName={productName}
+            costPerUse={costPerUse}
+            verdict={verdict}
+            onReset={handleResetButton}
+          />
         )}
       </main>
     </>
