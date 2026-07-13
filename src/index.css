@@ -1,18 +1,31 @@
-:root {
+*{
   margin: 0;
-  background-color: #360065;
-  color: #fff;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  color: #fff;
-  text-align: center;
-  margin-top: 2rem;
+body {
+  background-color: #f4f4f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #0b57d0;
 }
