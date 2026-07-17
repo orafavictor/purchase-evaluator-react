@@ -29,3 +29,44 @@ h1 {
   margin-bottom: 1.5rem;
   color: #0b57d0;
 }
+
+/* A CAIXA FALSA (Finge ser o input) */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+/* O TEXTO FIXO ("R$") */
+.input-prefix {
+  color: #666;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* O INPUT VERDADEIRO (Invisível, sem bordas) */
+.input-field {
+  flex: 1; /* Ocupa todo o resto do espaço */
+  border: none;
+  outline: none; /* Tira aquela borda azul feia ao clicar */
+  background: transparent;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+/* Remove as setas no Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove as setas no Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; /* Deixarei por garantia para Firefox antigo */
+  appearance: textfield; /* Regra moderna, para retirar o aviso anterior do CSS */
+}

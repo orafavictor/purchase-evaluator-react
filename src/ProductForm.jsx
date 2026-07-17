@@ -17,13 +17,15 @@ function ProductForm(props) {
       
       <div>
         <h3>Product Price</h3>
-        <Input 
-          type="text" 
-          name="price" 
-          placeholder="Enter the product price" 
-          value={props.productPrice}
-          onChangeAction={props.onPriceChange}
-        />
+          <Input
+            type="number"
+            name="price"
+            placeholder="Ex: 50.00"
+            value={props.productPrice}
+            onChangeAction={props.onPriceChange}
+            prefix="R$" 
+            min="0"
+          />
       </div>
       
       <div>
