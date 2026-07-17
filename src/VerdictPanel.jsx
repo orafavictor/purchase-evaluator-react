@@ -7,7 +7,7 @@ function VerdictPanel(props) {
             <h2>Veredito!</h2>
             <p>
               O produto {props.productName} custará:<br />
-              R$ {props.costPerUse} por uso.<br />
+              {props.costPerUse.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} por uso.<br />
               {props.verdict}<br />
             </p>
           </div>

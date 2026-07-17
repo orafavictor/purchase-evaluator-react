@@ -22,6 +22,10 @@ function App() {
   };
 
   const handleEvaluateButton = () => {
+    if (productName === "" || productPrice === "" || productUsage === "") {
+      alert("⚠️ Opa! Por favor, preencha todos os campos antes de avaliar.");
+      return;
+    }
     const newProductPrice = Number(productPrice);
     const newProductUsage = Number(productUsage);
 
